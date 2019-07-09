@@ -29,13 +29,13 @@ class PokemonPage extends React.Component {
     this.filter();
   };
 
-  filter = () => {
-    let newPokeList = Array.from(this.state.pokemonList);
-    let filteredList = newPokeList.filter(poke =>
-      poke.name.includes(this.state.searchTerm)
-    );
-    this.setState({ pokemonList: filteredList });
-  };
+  // filter = () => {
+  //   let newPokeList = Array.from(this.state.pokemonList);
+  //   let filteredList = newPokeList.filter(pokemon =>
+  //     pokemon.name.includes(this.state.searchTerm)
+  //   );
+  //   this.setState({ pokemonList: filteredList });
+  // };
 
   handleAddPokemon = pokemon => {
     this.setState(prevState => ({
@@ -45,8 +45,8 @@ class PokemonPage extends React.Component {
 
   render() {
     let newPokeList = Array.from(this.state.pokemonList);
-    let filteredList = newPokeList.filter(poke =>
-      poke.name.includes(this.state.searchTerm)
+    let filteredList = newPokeList.filter(pokemon =>
+      pokemon.name.includes(this.state.searchTerm)
     );
     return (
       <div>
